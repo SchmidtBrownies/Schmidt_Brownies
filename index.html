@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Schmidt Brownies</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;margin:0;background:#ffffff;color:#333}
+
+/* HERO BANNER FINAL */
+.hero{
+position:relative;
+width:100%;
+height:350px;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.7);
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+text-align:center;
+color:white;
+}
+
+.hero-text h1{
+font-size:52px;
+margin:0;
+}
+
+.hero-text p{
+font-size:20px;
+margin-top:10px;
+}
+
+.container{max-width:1200px;margin:auto;padding:70px 20px}
+
+.section-title{text-align:center;font-size:34px;margin-bottom:35px}
+
+.description{text-align:center;font-size:20px;line-height:1.7;max-width:750px;margin:auto;margin-bottom:70px}
+
+.fade{opacity:0;transform:translateY(25px);animation:fadeUp .9s forwards}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(25px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+
+.card{background:#fff;padding:30px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.price{font-size:26px;color:#5a2d0c;font-weight:700;margin-top:10px}
+
+.flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:20px}
+
+.flavor{background:#fff5f2;padding:15px;border-radius:12px;text-align:center;font-weight:600}
+
+.flavor img{
+width:100%;
+height:180px; /* aumentei um pouco a resolução visual */
+object-fit:cover;
+border-radius:10px;
+margin-top:10px
+}
+
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;margin-top:20px}
+
+.box{background:#fff;padding:25px;border-radius:14px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:20px}
+
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.15);transition:.3s}
+.gallery img:hover{transform:scale(1.05)}
+
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:20px}
+
+.testimonial{background:#fff;padding:25px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+
+.order{text-align:center;margin-top:80px}
+
+button{background:#ffb6a8;border:none;padding:18px 45px;font-size:18px;border-radius:10px;cursor:pointer;font-weight:700;transition:.25s}
+button:hover{transform:scale(1.05);background:#ffa897}
+
+.social{text-align:center;margin-top:70px}
+
+.social a{text-decoration:none;margin:0 18px;font-weight:600;color:#5a2d0c;font-size:18px}
+
+.social i{margin-right:8px}
+
+.whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:white;font-size:18px;padding:15px 20px;border-radius:50px;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+
+.whatsapp i{margin-right:8px}
+
+footer{text-align:center;padding:35px;margin-top:80px;background:#fafafa;color:#777}
+
+
+
+/* MOBILE RESPONSIVO */
+@media(max-width:600px){
+
+.hero{
+height:260px;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
+.container{
+padding:40px 15px;
+}
+
+.section-title{
+font-size:26px;
+}
+
+.description{
+font-size:16px;
+}
+
+.products{
+grid-template-columns:1fr;
+}
+
+.flavors{
+grid-template-columns:1fr 1fr;
+}
+
+.boxes{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+}
+
+.testimonials{
+grid-template-columns:1fr;
+}
+
+button{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<img src="banner.jpg" alt="Schmidt Brownies banner">
+<div class="hero-text">
+<h1>Schmidt Brownies</h1>
+<p>Brownies artesanais feitos com muito chocolate 🍫</p>
+</div>
+</section>
+
+<div class="container">
+
+<div class="description fade">
+<b>Brownies artesanais com casquinha crocante por fora e extremamente macios por dentro.</b><br><br>
+Feitos com ingredientes selecionados e muito chocolate para entregar um sabor intenso e inesquecível.
+</div>
+
+<h2 class="section-title fade">Nossos Brownies</h2>
+
+<div class="products fade">
+<div class="card">
+<h3>Brownie Tradicional</h3>
+<p>Clássico brownie de chocolate intenso.</p>
+<div class="price">R$10</div>
+</div>
+
+<div class="card">
+<h3>Brownie Especial</h3>
+<p>Brownies com coberturas deliciosas.</p>
+<div class="price">R$12</div>
+</div>
+</div>
+
+<h2 class="section-title fade">Sabores Disponíveis</h2>
+
+<div class="flavors fade">
+<div class="flavor">Brigadeiro<img src="sabor1.jpg"></div>
+<div class="flavor">Doce de Leite<img src="sabor2.jpg"></div>
+<div class="flavor">Nutella<img src="sabor3.jpg"></div>
+<div class="flavor">Chocolate Branco<img src="sabor4.jpg"></div>
+</div>
+
+<h2 class="section-title fade">Caixas de Brownies</h2>
+
+<div class="boxes fade">
+<div class="box"><h3>Caixa com 6</h3><p>Perfeita para um lanche especial.</p></div>
+<div class="box"><h3>Caixa com 12</h3><p>Ideal para dividir.</p></div>
+<div class="box"><h3>Caixa com 24</h3><p>Perfeita para festas.</p></div>
+</div>
+
+<div class="order fade">
+<h2>Faça sua encomenda</h2>
+<p>Peça agora pelo WhatsApp</p>
+<a href="https://wa.me/5548999359906" target="_blank">
+<button>Pedir agora</button>
+</a>
+</div>
+
+<h2 class="section-title fade">Galeria</h2>
+
+<div class="gallery fade">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+
+<h2 class="section-title fade">Avaliações</h2>
+
+<div class="testimonials fade">
+<div class="testimonial">"Melhor brownie que já comi!" ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">"Muito macio e com muito chocolate." ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">"Comprei para festa e todos amaram." ⭐⭐⭐⭐⭐</div>
+</div>
+
+<div class="social fade">
+<h3>Siga a Schmidt Brownies</h3>
+<a href="https://instagram.com"><i class="fa-brands fa-instagram"></i>Instagram</a>
+<a href="https://facebook.com"><i class="fa-brands fa-facebook"></i>Facebook</a>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/5548999359906" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+
+<footer>
+© 2026 Schmidt Brownies • Feito com 🍫
+</footer>
+
+</body>
+</html>
